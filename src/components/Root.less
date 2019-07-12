@@ -1,0 +1,94 @@
+@import '~antd/lib/style/themes/default.less';
+
+@nav-header-height: @layout-header-height;
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+.rootLogo {
+  position: relative;
+  height: @nav-header-height;
+  padding-left: (@menu-collapsed-width - 32px) / 2;
+  overflow: hidden;
+  line-height: @nav-header-height;
+  background: #002140;
+  transition: all 0.3s;
+  img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+  h1 {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+  }
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.right {
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  .action {
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > i {
+      color: @text-color;
+      vertical-align: middle;
+    }
+    &:hover {
+      background: @pro-header-hover-bg;
+    }
+    &:global(.opened) {
+      background: @pro-header-hover-bg;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: ~'calc((@{layout-header-height} - 54px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+.menuContainer > * {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: @shadow-1-down;
+}
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.makeInline{
+  display: inline-block;
+}

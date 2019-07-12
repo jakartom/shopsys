@@ -1,0 +1,1 @@
+export const getCustomerState = state => state.customer;
